@@ -2,14 +2,24 @@ name = input('Enter your name:\n')
 print('Welcome', name)
 
 age = int(input('Please enter your age:\n'))
-Ok = age >= 18
+Ok = 75>= age >= 18
 
 if Ok:
-    print('Welcome to the site',name)
+    print('Age verified',name)
     suggested_nickname=(name+str(age))
-    print('Suggested_Nickname:',suggested_nickname)
-    chosen_nickname=input('Please enter your nickname:\n')
-    print('Your nickname is:', chosen_nickname)
+    print('Suggested login:',suggested_nickname)
+    chosen_nickname=input('Please enter your login:\n')
+    print('Your login is:', chosen_nickname)
+    password=input('Please create a password:\n')
+    
+    print ('You are too old')
+    password1=input('Please confirm your password:\n')
+    while password1!=password:
+        print('Incorrect password')
+        password1=input('Please confirm your password:\n')
+    print('Confirmed')
+elif age>75:
+    print ('You are too old')
     
 else:
-    print('Error')
+    print('Age was not verified')
